@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-      <meta charset="UTF-8">
-      <title>Папка какая то</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная навигация по закладкам</title>
 </head>
-
 <body>
-      <p><img src="1.gif" width="411" height="46" usemap="#map" alt="Навигация"></p>
-      <map name="map">
-            <area shape="poly" alt="Закладка 2"
-                  coords="210,27,203,9,202,6,197,2,192,1,120,1,115,2,110,6,112,9,119,27,119,32,211,32,210,27"
-                  href="lab1_1.html">
-            <area shape="poly" alt="Закладка 3"
-                  coords="302,27,295,9,293,6,289,2,283,1,212,1,206,2,202,6,203,9,210,27,211,32,284,32,303,32,302,27"
-                  href="lab1_2.html">
-            <area shape="poly" alt="Закладка 4"
-                  coords="302,27,303,32,394,32,393,27,386,9,382,3,375,1,303,1,298,2,293,6,295,9,302,27"
-                  href="lab1_4.html">
-      </map>
-</body>
+    <nav>
+        <p>
+            <img src="1.gif" 
+                 width="411" height="46" 
+                 usemap="#main-nav" 
+                 alt="Меню навигации в виде закладок" 
+                 style="display: block; border: 0;">
+        </p>
 
+        <map name="main-nav">
+            <area shape="poly" 
+                  coords="210,27,203,9,202,6,197,2,192,1,120,1,115,2,110,6,112,9,119,27,119,32,211,32,210,27" 
+                  href="lab1_1.html" 
+                  alt="Раздел 2" 
+                  title="Перейти к Закладке 2">
+            <area shape="poly" 
+                  coords="302,27,295,9,293,6,289,2,283,1,212,1,206,2,202,6,203,9,210,27,211,32,284,32,303,32,302,27" 
+                  href="lab1_2.html" 
+                  alt="Раздел 3" 
+                  title="Перейти к Закладке 3">
+            <area shape="poly" 
+                  coords="302,27,303,32,394,32,393,27,386,9,382,3,375,1,303,1,298,2,293,6,295,9,302,27" 
+                  href="lab1_4.html" 
+                  alt="Раздел 4" 
+                  title="Перейти к Закладке 4">
+            <area shape="default" 
+                  href="index.html" 
+                  alt="На главную" 
+                  title="Вернуться на главную страницу">
+        </map>
+    </nav>
+    <noscript>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="lab1_1.html">Закладка 2</a></li>
+            <li><a href="lab1_2.html">Закладка 3</a></li>
+            <li><a href="lab1_4.html">Закладка 4</a></li>
+        </ul>
+    </noscript>
+
+</body>
 </html>

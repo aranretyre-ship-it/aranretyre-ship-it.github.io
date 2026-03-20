@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <title>Изображения</title>
@@ -24,13 +25,16 @@
         которые отображаются хорошо на устройствах с сильно отличающимися размерами экрана, разрешением, и другими характеристиками)
         используют атрибуты <code>sizes</code> и  <code>srcset</code>.
         <br>Атрибут <code>sizes</code> задаёт размеры изображения для разных макетов страницы. </p>
-    <img src="images/mushroom.jpg"
-         sizes="200px, 450px"
-         alt="Прост гриб">
+<img src="mushroom-low.jpg" 
+     srcset="mushroom-small.jpg 200w, mushroom-big.jpg 800w" 
+     sizes="(max-width: 600px) 200px, 800px" 
+     alt="Просто гриб">
+
     <p>Атрибут <code>srcset</code> задаёт путь к графическим файлам с учётом размера изображения и устройств.</p>
-    <img srcset="images/mushroom_portrait.jpg 350w, images/mushroom_landscape.jpg 650w"
-         sizes="20vw, 100vw"
-         alt="Грибки разных размеров">
+<img srcset="images/mushroom_portrait.jpg 350w, 
+             images/mushroom_landscape.jpg 650w"
+     sizes="(max-width: 600px) 100vw, 20vw" 
+     alt="Грибки разных размеров">
 
 
 
