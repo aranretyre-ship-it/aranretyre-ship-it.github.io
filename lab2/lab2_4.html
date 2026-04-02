@@ -1,71 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Встраиваемый контент</title>
-	<style>
-		.tag {
-			color: navy;
-		}
-
-		.attribute {
-			color: #e6550d;
-		}
-        figure {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #eee;
-            display: inline-block;
-        }
-        figcaption {
-            font-style: italic;
-            margin-top: 8px;
-            color: #555;
-        }
-        video, audio {
-            display: block;
-            margin-top: 10px;
-        }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Встраиваемый контент - ОГУ им. Тургенева</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .tag { color: navy; font-family: monospace; }
+        .attribute { color: #e6550d; font-family: monospace; }
+        
+        /* Стили для сетки видео и карты */
+        .media-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+        figure { margin: 0; padding: 10px; border: 1px solid #ddd; background: #f9f9f9; flex: 1; min-width: 320px; }
+        figcaption { font-style: italic; margin-top: 10px; text-align: center; color: #333; }
+        
+        iframe, video { width: 100%; border: 0; }
+        audio { width: 100%; margin-top: 10px; }
+    </style>
 </head>
-
 <body>
-	<h1>Встраиваемый контент</h1>
-	<p>Один из способов добавления содержимого на страницу — это внедрить другую HTML-страницу в текущую. Это делается с
-		помощью встроенного фрейма или элемента <span class="tag">&lt;iframe&gt;</span>. Данный элемент принимает URL
-		другой HTML-страницы в значении атрибута <span class="attribute">src</span>&nbsp;— это вызывает содержимое из
-		внедрённой HTML-страницы для отображения на текущей странице. Значение атрибута <span
-			class="attribute">src</span> может быть URL относительно страницы, где появляется элемент <span
-			class="tag">&lt;iframe&gt;</span> или абсолютным адресом для исключительно внешней страницы.</p>
-	<p>Многие страницы используют элемент <span class="tag">&lt;iframe&gt;</span> для внедрения медиа-контента на
-		страницу с внешнего сайта, вроде Google Maps, YouTube и др.</p>
 
-	<h2>Демонстрация добавления встроенного фрейма</h2>
+    <h1>Встраиваемый контент</h1>
+    <p>Один из способов добавления содержимого на страницу — это внедрить другую HTML-страницу в текущую. Это делается с помощью встроенного фрейма или элемента <span class="tag">&lt;iframe&gt;</span>. Данный элемент принимает URL другой HTML-страницы в значении атрибута <span class="attribute">src</span>. Многие страницы используют элемент <span class="tag">&lt;iframe&gt;</span> для внедрения медиа-контента с внешних сайтов.</p>
 
-    <figure>
-        <iframe src="https://vk.com" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        <figcaption>Видеоролик из сообщества VK</figcaption>
+    <h2>Демонстрация добавления встроенного фрейма</h2>
+    <div class="media-grid">
+        <!-- 1. Видео из VK -->
+        <figure>
+            <iframe src="https://vk.com" height="300" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <figcaption>Видеоролик из сообщества VK</figcaption>
+        </figure>
+
+        <!-- 2. Карта Яндекса (ОГУ Корпус №1, ул. Комсомольская, 95) -->
+        <figure>
+            <iframe src="https://yandex.ru" height="300" allowfullscreen="true"></iframe>
+            <figcaption>Местоположение университета на карте Яндекса (Корпус №1)</figcaption>
+        </figure>
+    </div>
+
+    <h2>Демонстрация добавления на страницу видео</h2>
+    <figure style="max-width: 640px;">
+        <!-- Ссылка на локальный файл oreluniver.mp4 -->
+        <video controls poster="poster.jpg">
+            <source src="oreluniver.mp4" type="video/mp4">
+            Ваш браузер не поддерживает встроенное видео.
+        </video>
+        <figcaption>Видеопрезентация ОГУ имени И.С. Тургенева (локальный файл)</figcaption>
     </figure>
 
-    <figure>
-        <iframe src="https://yandex.ru" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-        <figcaption>Местоположение университета на карте Яндекса</figcaption>
+    <h2>Демонстрация добавления на страницу аудио</h2>
+    <figure style="max-width: 400px;">
+        <audio controls>
+            <source src="yuriy-gagarin-poehali.mp3" type="audio/mpeg">
+            <source src="yuriy-gagarin-poehali.ogg" type="audio/ogg">
+            Ваш браузер не поддерживает аудиоэлемент.
+        </audio>
+        <figcaption>Юрий Гагарин — "Поехали!"</figcaption>
     </figure>
-
-
-	<h2>Демонстрация добавления на страницу видео</h2>
-    <video width="640" height="360" controls poster="poster.jpg">
-        <source src="oreluniver.mp4" type="video/mp4">
-    </video>
-
-
-	<h2>Демонстрация добавления на страницу аудио</h2>
-    <audio controls>
-        <source src="yuriy-gagarin-poehali.mp3" type="audio/mpeg">
-        <source src="yuriy-gagarin-poehali.ogg" type="audio/ogg">
-    </audio>
 
 </body>
 </html>
