@@ -2,17 +2,22 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Фреймы</title>
+    <title>Задание с фреймами</title>
     <style>
-        body { margin: 0; display: flex; }
-        iframe { border: 1px solid gray; height: 100vh; }
+        body { margin: 0; padding: 0; display: flex; height: 100vh; overflow: hidden; }
+        /* Левая узкая колонка для меню */
+        #menu-frame { width: 250px; border-right: 2px solid #ccc; height: 100%; }
+        /* Правая широкая область для контента */
+        #content-frame { flex-grow: 1; border: none; height: 100%; }
     </style>
 </head>
 <body>
-    <!-- Левый фрейм (меню) -->
-    <iframe src="menu.html" name="menu" style="width: 200px;"></iframe>
-    
-    <!-- Правый фрейм (контент) -->
-    <iframe src="about:blank" name="content" style="width: 800px;"></iframe>
+
+    <!-- src указывает на файл с кнопками. name="left" — имя для ссылок -->
+    <iframe src="iframes/menu.html" id="menu-frame" name="left"></iframe>
+
+    <!-- Здесь по умолчанию открыт doc.html. name="right" — СЮДА будут грузиться страницы -->
+    <iframe src="iframes/doc.html" id="content-frame" name="right"></iframe>
+
 </body>
 </html>
