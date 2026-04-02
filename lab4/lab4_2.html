@@ -4,56 +4,56 @@
     <meta charset="UTF-8">
     <title>Оформление вертикального меню</title>
     <style>
-        html {
-            background: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        
-        .menu {
-            width: 250px;
-            background: #fff;
-            padding: 15px;
-            border: 1px solid #ccc;
-            margin: 20px;
-        }
-        .menu ul {
-            list-style: none; 
-            padding: 0;
-            margin: 0;
-        }
-        
-        .menu > ul > li {
-            list-style-image: url('plus.gif'); 
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        
-        .menu li a {
-            text-decoration: none;
-            color: #0055aa;
-            font-size: 14px;
-            vertical-align: middle;
-        }
-        
-        .menu li a:hover {
-            text-decoration: underline;
-            color: #ff6600;
-        }
-        
-        .menu li ul {
-            margin-top: 5px;
-            margin-left: 20px; 
-        }
-        
-        .menu li ul li {
-            list-style-image: url('bullet.gif'); 
-            margin-bottom: 5px;
-        }
+    html {
+        background: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
 
-        .menu li {
-            padding-left: 5px;
-        }
-    </style>
+    .menu {
+        width: 250px;
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin: 20px;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu > ul > li {
+        list-style-image: url('file/plus.gif'); 
+        margin-left: 25px;
+        margin-bottom: 10px;
+    }
+
+    .menu > ul > li:hover {
+        list-style-image: url('file/minus.gif');
+    }
+
+    .menu li ul {
+        margin-left: 20px; 
+        margin-top: 5px;
+    }
+
+    .menu li ul li {
+        list-style-image: url('file/point.gif');
+        margin-bottom: 5px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #0066cc;
+        vertical-align: middle;
+    }
+
+    .menu a:hover {
+        text-decoration: underline;
+        color: #ff6600;
+    }
+</style>
 </head>
 <body>
     <nav class="menu">
