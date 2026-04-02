@@ -1,91 +1,84 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Таблицы</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №2 - Таблицы</title>
 <style>
-table {
-	width: 200px;
-	border: 1px solid gray;
-	margin: 20px;
-	float: left;
-}
-td, th {
-	border: 1px solid gray;
-	padding: 30px;
-}
+    table {
+        width: 200px;
+        border: 1px solid gray;
+        margin: 20px;
+        float: left; /* Чтобы таблицы шли в ряд, как на картинке */
+        border-collapse: collapse;
+    }
+    td, th {
+        border: 1px solid gray;
+        padding: 20px; /* Немного уменьшил, чтобы таблицы не были гигантскими */
+        text-align: center;
+    }
+    /* Заголовочные ячейки (№1) по умолчанию жирные */
 </style>
 </head>
 <body>
-	<table>
-		<caption>1-й шаблон таблицы</caption>
-		<tbody>
-		<tr>
-			<th>1</th>
-			<td>2</td>
-			<td>3</td>
-		</tr>
-		<tr>
-			<th>4</th>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		</tbody>
-	</table>
 
-	<table>
-		<caption>2-й шаблон таблицы</caption>
-		<tbody>
-		<tr>
-			<th>1</th>
-			<th>2</th>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>4</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		</tbody>
-	</table>
+    <!-- 1-я таблица -->
+    <table>
+        <caption>1-я таблица</caption>
+        <tr>
+            <th rowspan="2">1</th> <!-- Объединяем 2 строки вниз -->
+            <td colspan="2">2</td> <!-- Объединяем 2 колонки вправо -->
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
 
-	<table>
-		<caption>3-й шаблон таблицы</caption>
-		<tbody>
-		<tr>
-			<th>1</th>
-			<th>2</th>
-		</tr>
-		<tr>
-			<th>3</th>
-			<th>4</th>
-		</tr>
-		<tr>
-			<th>5</th>
-			<th>6</th>
-		</tr>
-		</tbody>
-	</table>
+    <!-- 2-я таблица -->
+    <table>
+        <caption>2-я таблица</caption>
+        <tr>
+            <th colspan="2">1</th> <!-- Объединяем 2 колонки -->
+        </tr>
+        <tr>
+            <td rowspan="2">3</td> <!-- Объединяем 2 строки -->
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>6</td>
+        </tr>
+    </table>
 
-	<table>
-		<caption>4-й шаблон таблицы</caption>
-		<tbody>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>4</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		</tbody>
-	</table>
+    <!-- 3-я таблица -->
+    <table>
+        <caption>3-я таблица</caption>
+        <tr>
+            <td>1</td>
+            <td rowspan="3">2</td> <!-- Объединяем 3 строки -->
+        </tr>
+        <tr>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <!-- 4-я таблица -->
+    <table>
+        <caption>4-я таблица</caption>
+        <tr>
+            <th colspan="2">1</th> <!-- Объединяем 2 колонки -->
+        </tr>
+        <tr>
+            <td rowspan="2">3</td> <!-- Объединяем 2 строки -->
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+    </table>
+
 </body>
 </html>
