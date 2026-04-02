@@ -13,7 +13,6 @@
 		.attribute {
 			color: #e6550d;
 		}
-        /* Добавим немного стилей для красоты */
         figure {
             margin: 20px 0;
             padding: 10px;
@@ -44,14 +43,12 @@
 		страницу с внешнего сайта, вроде Google Maps, YouTube и др.</p>
 
 	<h2>Демонстрация добавления встроенного фрейма</h2>
-    
-    <!-- 1. Видео из VK с подписью -->
+
     <figure>
         <iframe src="https://vk.com" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
         <figcaption>Видеоролик из сообщества VK</figcaption>
     </figure>
 
-    <!-- 2. Карта Яндекса с подписью -->
     <figure>
         <iframe src="https://yandex.ru" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
         <figcaption>Местоположение университета на карте Яндекса</figcaption>
@@ -59,22 +56,16 @@
 
 
 	<h2>Демонстрация добавления на страницу видео</h2>
-    <!-- Видео с элементами управления и обложкой -->
     <video width="640" height="360" controls poster="poster.jpg">
         <source src="oreluniver.mp4" type="video/mp4">
-        Ваш браузер не поддерживает встроенное видео.
     </video>
-    <p><small>* Убедитесь, что файл oreluniver.mp4 лежит в той же папке</small></p>
 
 
 	<h2>Демонстрация добавления на страницу аудио</h2>
-    <!-- Аудио с поддержкой двух форматов -->
     <audio controls>
         <source src="yuriy-gagarin-poehali.mp3" type="audio/mpeg">
         <source src="yuriy-gagarin-poehali.ogg" type="audio/ogg">
-        Ваш браузер не поддерживает аудиоэлемент.
     </audio>
-    <p><small>* Файлы mp3 и ogg должны быть загружены в репозиторий</small></p>
 
 </body>
 </html>
