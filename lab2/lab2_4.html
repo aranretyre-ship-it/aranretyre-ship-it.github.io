@@ -1,10 +1,80 @@
-<h3>Варианты встраивания видео:</h3>
+<!DOCTYPE html>
+<html lang="ru">
 
-<!-- Способ 1: Свой файл (HTML5) -->
-<video width="400" controls>
-    <source src="video.mp4" type="video/mp4">
-    Ваш браузер не поддерживает видео.
-</video>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Встраиваемый контент</title>
+	<style>
+		.tag {
+			color: navy;
+		}
 
-<!-- Способ 2: YouTube (через iframe) -->
-<iframe width="560" height="315" src="https://youtube.com" frameborder="0" allowfullscreen></iframe>
+		.attribute {
+			color: #e6550d;
+		}
+        /* Добавим немного стилей для красоты */
+        figure {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #eee;
+            display: inline-block;
+        }
+        figcaption {
+            font-style: italic;
+            margin-top: 8px;
+            color: #555;
+        }
+        video, audio {
+            display: block;
+            margin-top: 10px;
+        }
+	</style>
+</head>
+
+<body>
+	<h1>Встраиваемый контент</h1>
+	<p>Один из способов добавления содержимого на страницу — это внедрить другую HTML-страницу в текущую. Это делается с
+		помощью встроенного фрейма или элемента <span class="tag">&lt;iframe&gt;</span>. Данный элемент принимает URL
+		другой HTML-страницы в значении атрибута <span class="attribute">src</span>&nbsp;— это вызывает содержимое из
+		внедрённой HTML-страницы для отображения на текущей странице. Значение атрибута <span
+			class="attribute">src</span> может быть URL относительно страницы, где появляется элемент <span
+			class="tag">&lt;iframe&gt;</span> или абсолютным адресом для исключительно внешней страницы.</p>
+	<p>Многие страницы используют элемент <span class="tag">&lt;iframe&gt;</span> для внедрения медиа-контента на
+		страницу с внешнего сайта, вроде Google Maps, YouTube и др.</p>
+
+	<h2>Демонстрация добавления встроенного фрейма</h2>
+    
+    <!-- 1. Видео из VK с подписью -->
+    <figure>
+        <iframe src="https://vk.com" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <figcaption>Видеоролик из сообщества VK</figcaption>
+    </figure>
+
+    <!-- 2. Карта Яндекса с подписью -->
+    <figure>
+        <iframe src="https://yandex.ru" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        <figcaption>Местоположение университета на карте Яндекса</figcaption>
+    </figure>
+
+
+	<h2>Демонстрация добавления на страницу видео</h2>
+    <!-- Видео с элементами управления и обложкой -->
+    <video width="640" height="360" controls poster="poster.jpg">
+        <source src="oreluniver.mp4" type="video/mp4">
+        Ваш браузер не поддерживает встроенное видео.
+    </video>
+    <p><small>* Убедитесь, что файл oreluniver.mp4 лежит в той же папке</small></p>
+
+
+	<h2>Демонстрация добавления на страницу аудио</h2>
+    <!-- Аудио с поддержкой двух форматов -->
+    <audio controls>
+        <source src="yuriy-gagarin-poehali.mp3" type="audio/mpeg">
+        <source src="yuriy-gagarin-poehali.ogg" type="audio/ogg">
+        Ваш браузер не поддерживает аудиоэлемент.
+    </audio>
+    <p><small>* Файлы mp3 и ogg должны быть загружены в репозиторий</small></p>
+
+</body>
+</html>
