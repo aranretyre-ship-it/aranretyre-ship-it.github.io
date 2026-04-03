@@ -12,9 +12,10 @@ p {
 
 h1, h2 {
     text-align: right;
-    font-family: sans-serif;
+    font-family: 'Pacifico', cursive; 
     color: red;
 }
+
 
 em {
     color: green;
