@@ -9,25 +9,22 @@
         width: 200px;
         border: 1px solid gray;
         margin: 20px;
-        float: left; /* Чтобы таблицы шли в ряд, как на картинке */
+        float: left; 
         border-collapse: collapse;
     }
     td, th {
         border: 1px solid gray;
-        padding: 20px; /* Немного уменьшил, чтобы таблицы не были гигантскими */
+        padding: 20px;
         text-align: center;
     }
-    /* Заголовочные ячейки (№1) по умолчанию жирные */
 </style>
 </head>
 <body>
-
-    <!-- 1-я таблица -->
     <table>
         <caption>1-я таблица</caption>
         <tr>
-            <th rowspan="2">1</th> <!-- Объединяем 2 строки вниз -->
-            <td colspan="2">2</td> <!-- Объединяем 2 колонки вправо -->
+            <th rowspan="2">1</th>
+            <td colspan="2">2</td> 
         </tr>
         <tr>
             <td>5</td>
@@ -39,10 +36,10 @@
     <table>
         <caption>2-я таблица</caption>
         <tr>
-            <th colspan="2">1</th> <!-- Объединяем 2 колонки -->
+            <th colspan="2">1</th> 
         </tr>
         <tr>
-            <td rowspan="2">3</td> <!-- Объединяем 2 строки -->
+            <td rowspan="2">3</td>
             <td>4</td>
         </tr>
         <tr>
@@ -50,12 +47,11 @@
         </tr>
     </table>
 
-    <!-- 3-я таблица -->
     <table>
         <caption>3-я таблица</caption>
         <tr>
             <td>1</td>
-            <td rowspan="3">2</td> <!-- Объединяем 3 строки -->
+            <td rowspan="3">2</td> 
         </tr>
         <tr>
             <td>3</td>
@@ -65,14 +61,13 @@
         </tr>
     </table>
 
-    <!-- 4-я таблица -->
     <table>
         <caption>4-я таблица</caption>
         <tr>
-            <th colspan="2">1</th> <!-- Объединяем 2 колонки -->
+            <th colspan="2">1</th> 
         </tr>
         <tr>
-            <td rowspan="2">3</td> <!-- Объединяем 2 строки -->
+            <td rowspan="2">3</td>
             <td>4</td>
         </tr>
         <tr>
