@@ -1,0 +1,30 @@
+
+.menu, .submenu {
+  list-style: none;
+  padding-left: 0;
+}
+.menu > li > .menu-title::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background-image: url('css_sprite.png');
+  background-repeat: no-repeat;
+}
+.films .menu-title::before {
+  background-position: -10px -46px; /* bg-point */
+}
+
+.music .menu-title::before {
+  background-position: -10px -46px;
+}
+
+.software .menu-title::before {
+  background-position: -10px -46px;
+}
+
+.games .menu-title::before {
+  background-position: -10px -46px;
+}
