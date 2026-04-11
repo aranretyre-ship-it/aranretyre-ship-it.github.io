@@ -1,95 +1,82 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Оформление вертикального меню</title>
-    <style>
-    html {
-        background: #f0f0f0;
-        font-family: Arial, sans-serif;
-    }
-
-    .menu {
-        width: 250px;
-        background: #fff;
-        padding: 20px;
-        border: 1px solid #ccc;
-        margin: 20px;
-    }
-
-    .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .menu > ul > li {
-        list-style-image: url('file/plus.gif'); 
-        margin-left: 25px;
-        margin-bottom: 10px;
-    }
-
-    .menu > ul > li:hover {
-        list-style-image: url('file/minus.gif');
-    }
-
-    .menu li ul {
-        margin-left: 20px; 
-        margin-top: 5px;
-    }
-
-    .menu li ul li {
-        list-style-image: url('file/point.gif');
-        margin-bottom: 5px;
-    }
-
-    .menu a {
-        text-decoration: none;
-        color: #0066cc;
-        vertical-align: middle;
-    }
-
-    .menu a:hover {
-        text-decoration: underline;
-        color: #ff6600;
-    }
-</style>
+		<meta charset="UTF-8">
+		<title>Оформление вертикального меню</title>
+		<style>
+html {
+     background: #f0f0f0;
+   }
+   
+   .menu {
+     width: 300px;
+     background: #fff;
+   }
+     
+   .menu ul { 
+             list-style: none;
+   }
+   
+   .menu li {
+    list-style: none; 
+    position: relative; 
+    
+   }
+   
+   .menu li a {
+    color: rgb(53, 122, 201);
+    padding: 20px;
+    background: url('minus.gif') no-repeat left;
+   }
+   
+   .menu li a:hover {
+    background: url('plus.gif') no-repeat left;
+   }
+   
+   .menu li ul {
+    padding-bottom: 20px;
+   }
+   
+   .menu li li a{
+    background: url('point.gif') no-repeat left;
+   }
+	</style>
 </head>
 <body>
-    <nav class="menu">
-        <ul>
-            <li><a href="#">Фильмы</a>
-                <ul>
-                    <li><a href="#">Экшн</a></li>
-                    <li><a href="#">Мелодрамы</a></li>
-                    <li><a href="#">Сериалы</a></li>
-                    <li><a href="#">Семейные</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Музыка</a>
-                <ul>
-                    <li><a href="#">Классика</a></li>
-                    <li><a href="#">Джаз</a></li>
-                    <li><a href="#">Рок</a></li>
-                    <li><a href="#">Грандж</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Софт</a>
-                <ul>
-                    <li><a href="#">Графика</a></li>
-                    <li><a href="#">3D-моделирование</a></li>
-                    <li><a href="#">Машинопись</a></li>
-                    <li><a href="#">Переводчики</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Игры</a>
-                <ul>
-                    <li><a href="#">РПГ</a></li>
-                    <li><a href="#">Шутеры</a></li>
-                    <li><a href="#">Пасьянсы</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+	<nav class="menu">
+		<ul>
+			<li><a href="#">Фильмы</a>
+				<ul>
+					<li><a href="#">Экшн</a></li>
+					<li><a href="#">Мелодрамы</a></li>
+					<li><a href="#">Сериалы</a></li>
+					<li><a href="#">Семейные</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Музыка</a>
+				<ul>
+					<li><a href="#">Классика</a></li>
+					<li><a href="#">Джаз</a></li>
+					<li><a href="#">Рок</a></li>
+					<li><a href="#">Грандж</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Софт</a>
+				<ul>
+					<li><a href="#">Графика</a></li>
+					<li><a href="#">3D-моделирование</a></li>
+					<li><a href="#">Машинопись</a></li>
+					<li><a href="#">Переводчики</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Игры</a>
+				<ul>
+					<li><a href="#">РПГ</a></li>
+					<li><a href="#">Шутеры</a></li>
+					<li><a href="#">Пасьянсы</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
 </body>
 </html>
