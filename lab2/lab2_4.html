@@ -13,21 +13,6 @@
 		.attribute {
 			color: #e6550d;
 		}
-        figure {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #eee;
-            display: inline-block;
-        }
-        figcaption {
-            font-style: italic;
-            margin-top: 8px;
-            color: #555;
-        }
-        video, audio {
-            display: block;
-            margin-top: 10px;
-        }
 	</style>
 </head>
 
@@ -43,34 +28,38 @@
 		страницу с внешнего сайта, вроде Google Maps, YouTube и др.</p>
 
 	<h2>Демонстрация добавления встроенного фрейма</h2>
-    
-    <figure>
-        <iframe src="https://vkvideo.ru/video_ext.php?oid=-202869502&id=456239024&hd=2" width="853" height="480" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder allowfullscreen></iframe>
-        <figcaption>Видеоролик из сообщества VK</figcaption>
-    </figure>
+	<figure>
+		<iframe src="https://vkvideo.ru/video_ext.php?oid=-202869502&id=456239024&hash=cafa05853fdb5f18" width="640"
+			height="360" allowfullscreen
+			allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+		<figcaption>Видео от Физико-математический ф-т ОГУ им. И.С. Тургенева</figcaption>
+	</figure>
 
-    <figure>
-        <div style="position:relative;overflow:hidden;">
-			<a href="https://yandex.ru/maps/org/orlovskiy_gosudarstvenny_universitet_imeni_i_s_turgeneva/1030860442/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Орловский государственный университет имени И.С. Тургенева</a>
-			<a href="https://yandex.ru/maps/10/orel/category/university/184106140/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в Орле</a>
-			<iframe src="https://yandex.ru/map-widget/v1/?from=api-maps&ll=36.063909%2C52.951255&mode=search&oid=1030860442&ol=biz&utm_source=api-maps&z=17" width="560" height="400" frameborder="1" allowfullscreen style="position:relative;"></iframe>
-		</div>
-        <figcaption>Местоположение университета на карте Яндекса</figcaption>
-    </figure>
-
+		<figure style="position:relative;overflow:hidden;">
+			<iframe
+				src="https://yandex.ru/map-widget/v1/?from=api-maps&ll=36.063909%2C52.951255&mode=search&oid=1030860442&ol=biz&utm_source=api-maps&z=17"
+				width="560" height="400" allowfullscreen style="position:relative;"></iframe>
+	<figcaption>Орловский государственный университет имени И.&nbsp;С.&nbsp;Тургенева с&nbsp;ЯндексКарт</figcaption>
+  </figure>
 
 	<h2>Демонстрация добавления на страницу видео</h2>
-    <video width="640" height="360" controls poster="poster.jpg">
-        <source src="Gagarin/6898527308543.mp4" type="video/mp4">
-    </video>
-
+	<figure>
+		<video controls poster="oreluniver.jpg">
+			<source src="oreluniver.mp4" type="video/mp4">
+			Ваш браузер не поддерживает видео.
+		</video>
+		<figcaption>Видео об Орловском университете</figcaption>
+	</figure>
 
 	<h2>Демонстрация добавления на страницу аудио</h2>
-    <audio controls>
-        <source src="Gagarin/soobschenie-levitana-o-polete-gagarina.mp3" type="audio/mpeg">
-        <source src="yuriy-gagarin-poehali.ogg" type="audio/ogg">
-    </audio>
-    <p><small>* Файлы mp3 и ogg должны быть загружены в репозиторий</small></p>
-
+	<figure>
+		<audio controls>
+			<source src="yuriy-gagarin-poehali.mp3" type="audio/mpeg">
+			<source src="yuriy-gagarin-poehali.ogg" type="audio/ogg">
+			Ваш браузер не поддерживает аудио.
+		</audio>
+		<figcaption>Аудио: Юрий Гагарин - "Поехали!"</figcaption>
+	</figure>
 </body>
+
 </html>
